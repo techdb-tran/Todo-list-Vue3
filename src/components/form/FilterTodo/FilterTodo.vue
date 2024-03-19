@@ -11,8 +11,5 @@ const handleChange = (item) => {
   emit('filter', item);
 };
 </script>
-<style scoped>
-#filter-todo {
-    width: 12rem;
-}
+<style src="./style.css">
 </style>

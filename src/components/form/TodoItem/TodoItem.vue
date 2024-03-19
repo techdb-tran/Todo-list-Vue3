@@ -15,7 +15,7 @@
     </div>
 </template>
 <script setup>
-import BaseButton from "../UI/BaseButton.vue";
+import BaseButton from "../../UI/BaseButton.vue";
 const props = defineProps({
   id: {
     type: String,
@@ -49,39 +49,6 @@ function deleteTodo() {
   }
 }
 </script>
-
-<style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-.todo-item-container {
-  width: 80%;
-  display: flex;
-  background: white;
-  margin: 0.5rem auto;
-}
-
-.todo-item-container span {
-  width: 80%;
-  margin: auto;
-  text-align: left;
-  padding-left:10px ;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  color: rgb(134, 131, 131);
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.completed {
-  text-decoration: line-through;
-}
-
-.done-btn {
-  background-color: #0bd4a2;
-}
-
-.delete-btn {
-  background-color: #ff6f47;
-}
+<style src="./style.css" scoped>
 </style>
 
