@@ -5,7 +5,7 @@
     </div>
 </template>
 <script setup>
-import FormTodo from './components/form/FormTodo.vue';
+import FormTodo from './components/form/FormTodo/FormTodo.vue';
 </script>
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');

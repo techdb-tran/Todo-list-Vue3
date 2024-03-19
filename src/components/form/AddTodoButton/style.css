@@ -1,12 +1,3 @@
-<template>
-    <BaseButton>
-        <p class="wrap-btn">+</p>
-    </BaseButton>
-</template>
-<script setup>
-import BaseButton from '../UI/BaseButton.vue'
-</script>
-<style scoped>
 .wrap-btn {
     color: white;
     font-size: 2rem;
@@ -22,4 +13,3 @@ button:hover .wrap-btn {
     background: white;
     color: #ff6f47;
 }
-</style>

@@ -9,9 +9,9 @@
 </template>
 
 <script setup>
-import AddTodo from './AddTodo.vue';
-import FilterTodo from './FilterTodo.vue';
-import TodoItem from './TodoItem.vue';
+import AddTodo from '../AddTodo/AddTodo.vue';
+import FilterTodo from '../FilterTodo/FilterTodo.vue';
+import TodoItem from '../TodoItem/TodoItem.vue';
 import { ref, watch, onMounted } from 'vue';
 
 const inputTodo = ref('');
@@ -20,7 +20,8 @@ const filteredTodoList = ref([]);
 const currentFilter = ref('all');
 
 function handleSubmitForm() {
-  const newTodo = {
+  if(inputTodo.value !==''){
+    const newTodo = {
     id: new Date().toISOString(),
     text: inputTodo.value,
     completed: false,
@@ -28,6 +29,7 @@ function handleSubmitForm() {
   todoList.value.unshift(newTodo);
   updateLocalStorage(todoList.value);
   filterTodoList();
+  }
 }
 
 function updateTodo(todo) {
@@ -82,18 +84,5 @@ onMounted(() => {
   filterTodoList();
 });
 </script>
-
-
-<style scoped>
-.form-container {
-  display: flex;
-  width: 92%;
-  margin: 4rem auto;
-  justify-content: space-between;
-}
-@media (max-width: 768px) {
-  .form-container {
-    flex-direction: column;
-  }
-}
+<style src="./style.css">
 </style>
