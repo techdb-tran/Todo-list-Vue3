@@ -30,7 +30,6 @@ function handleSubmitForm() {
   updateLocalStorage(todoList.value);
   filterTodoList();
   console.log(newTodo);
-  }
 }
 
 function updateTodo(todo) {
