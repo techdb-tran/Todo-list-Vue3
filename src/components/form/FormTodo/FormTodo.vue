@@ -29,6 +29,7 @@ function handleSubmitForm() {
   todoList.value.unshift(newTodo);
   updateLocalStorage(todoList.value);
   filterTodoList();
+  console.log(newTodo)
   }
 }
 
