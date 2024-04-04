@@ -13,6 +13,7 @@ const emit = defineEmits(['inputTodo']);
 function handleAdd(){
   emit('inputTodo', inputTodo.value);
   inputTodo.value = '';
+  console.log(inputTodo.value);
 }
 </script>
 <style src="./style.css" scoped>
